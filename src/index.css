@@ -48,10 +48,10 @@ small {
   text-shadow: 0 0 6px;
 }
 
-.mask{
+.mask {
   -webkit-mask-image: url("./assets/pentagon.svg");
   mask-image: url("./assets/pentagon.svg");
   mask-position: center;
   mask-repeat: no-repeat;
-  mask-size: 100%; 
+  mask-size: 100%;
 }

@@ -64,11 +64,17 @@ export default {
       },
       animation: {
         click: "click 0.2s ease-in-out forwards",
+        YApear: "YApear 0.4s ease-in-out forwards",
       },
       keyframes: {
         click: {
           "0%, 100%": { transform: "scale(1.2)" },
           "50%": { transform: "scale(1.3)" },
+        },
+
+        YApear: {
+          "0%, 40%": { transform: "translateY(200px)" },
+          "100%": { transform: "translateY(0)" },
         },
       },
     },
