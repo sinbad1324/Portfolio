@@ -37,7 +37,7 @@ small {
 
 .rootMain {
   display: grid;
-  grid-template-rows: calc(100vh - var(--row-header));
+  grid-template-rows: calc(100vh - var(--row-header)) 100vh;
 }
 
 .TextShadow {
@@ -46,4 +46,12 @@ small {
 
 .dark .d-TextShadow {
   text-shadow: 0 0 6px;
+}
+
+.mask{
+  -webkit-mask-image: url("./assets/pentagon.svg");
+  mask-image: url("./assets/pentagon.svg");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 100%; 
 }

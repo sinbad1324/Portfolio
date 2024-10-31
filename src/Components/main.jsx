@@ -1,8 +1,11 @@
 import { useRef, useEffect } from "react";
+import en from "../data/lang/en/lang.json"
+//import pentagon from "../assets/pentagon"
 
 export default function Main() {
     const textEditorRef = useRef();
     const IsRenderRef = useRef(false);
+    const navEN = en.Header.nav
 
     const NameText = "Izadpanah Mohammad";
     const KeyText = [
@@ -46,11 +49,11 @@ export default function Main() {
     }, [])
 
     return (<main className=" z-0 rootMain row-start-2 row-end-3 ">
-        <div id="Accueil" className=" z-0 w-full h-full row-start-1 row-end-2 bg-transparent mt-1  ">
+        <div id={navEN[0]} className="sticky z-0 w-full h-full row-start-1 row-end-2 bg-transparent mt-1  ">
             <div className=" w-full h-full lg:h-28 lg:pl-56  lg:top-[40%] relative flex flex-col lg:flex-row justify-center lg:justify-start items-center gap-10  " >
 
-                <div className=" overflow-hidden min-w-[100px] min-h-[100px] max-w-[200px] max-h-[200px] lg:max-w-[300px] lg:max-h-[300px]  max rounded-full relative ">
-                    <img className=" cursor-pointer hover:blur-[2px] hover:scale-125  transition-all bg-cover bg-center bg-transparent" src="https://th.bing.com/th/id/OIP.Wgq_Y1ai2-c2OVM6uP7WUgAAAA?rs=1&pid=ImgDetMain" alt="Profile face" />
+                <div className="mask overflow-hidden min-w-[100px] min-h-[100px] max-w-[200px] max-h-[200px] lg:max-w-[400px] lg:max-h-[400px]  max rounded-full relative ">
+                    <img className="cursor-pointer hover:blur-[2px] hover:scale-125  transition-all bg-cover bg-center bg-transparent" src="https://th.bing.com/th/id/OIP.Wgq_Y1ai2-c2OVM6uP7WUgAAAA?rs=1&pid=ImgDetMain" alt="Profile face" />
                 </div>
 
                 <div className="text-l-12  pl-5 md:pl-0   font-extrabold flex flex-col justify-center items-center lg:items-start gap-4 ">
@@ -65,7 +68,12 @@ export default function Main() {
             </div>
         </div>
 
+        <div id={navEN[1]} className="bg-transparent w-full h-full row-start-2 row-end-3" >
+            <div>
+                <img src="" alt=""  />
 
+            </div>
+        </div>
 
     </main>)
 }

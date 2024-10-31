@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useLangContext } from '../hooks/useLangContext'
 import { getCurrentLang } from '../data/getCurrentLang'
-//import en from "../data/"
+import en from "../data/lang/en/lang.json"
 let NavList = []
 
 export default function Nav() {
@@ -13,6 +13,7 @@ export default function Nav() {
 
 
     NavList = currentLang.Header.nav;
+    const navEN = en.Header.nav
 
     const onHandle = (e) => {
         setSelect(e.target.textContent)
@@ -28,9 +29,9 @@ export default function Nav() {
             <nav className="hidden sm:block" >
                 <ul className="  w-full h-full flex flex-row  gap-8">
                     {
-                        NavList.map((item) => (
+                        NavList.map((item , i) => (
                             <li key={item} className="max-w-10 w-10  md:w-16 md:max-w-20 text-nowrap  text-sm md:text-lg  text-center max-h-11 h-11  flex justify-center items-center " >
-                                <a onClick={onHandle} href={"/#" + item} className={`${select == item ? "bg-l-vert-7 rounded-2xl hover:bg-l-vert-8 dark:bg-d-vert-7 dark:hover:bg-d-vert-8 dark:text-d-vert-12 " : ""} active:animate-click w-fit px-2 py-1 text-center`} >
+                                <a onClick={onHandle} href={"/#" + navEN[i]} className={`${select == item ? "bg-l-vert-7 rounded-2xl hover:bg-l-vert-8 dark:bg-d-vert-7 dark:hover:bg-d-vert-8 dark:text-d-vert-12 " : ""} active:animate-click w-fit px-2 py-1 text-center`} >
                                     <span className="transition-all ease-in duration-75  hover:text-xl" >
                                         {item}
                                     </span>
