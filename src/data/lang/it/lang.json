@@ -1,0 +1,13 @@
+{
+    "Header": {
+        "nav": [
+            "Home",
+            "Chi siamo",
+            "Competenze",
+            "Progetti",
+            "Contatto"
+        ]
+    },
+    "Main": {},
+    "Footer": {}
+}

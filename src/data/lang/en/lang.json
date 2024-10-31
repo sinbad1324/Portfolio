@@ -1,0 +1,13 @@
+{
+    "Header": {
+        "nav": [
+            "Home",
+            "About",
+            "Skills",
+            "Projects",
+            "Contact"
+        ]
+    },
+    "Main": {},
+    "Footer": {}
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Tiro Bangla";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fresca";
+}
+
+/* html {
+  font-size: 100%;
+} 16px */
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+:root {
+  --row-header: 80px;
+  --row-footer: 150px;
+  --row-main: 1fr;
+}
+
+/* @layer components { */
+.rootBody {
+  display: grid;
+  grid-template-rows: var(--row-header) var(--row-main) var(--row-footer);
+}
+
+.rootMain {
+  display: grid;
+  grid-template-rows: calc(100vh - var(--row-header));
+}
+
+.TextShadow {
+  text-shadow: 0 0 6px;
+}
+
+.dark .d-TextShadow {
+  text-shadow: 0 0 6px;
+}
