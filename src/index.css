@@ -60,7 +60,7 @@ small {
 }
 
 .brushmask {
-  --url: url("https://static.vecteezy.com/system/resources/previews/008/477/243/non_2x/black-brush-stroke-cut-out-free-png.png");
+  --url: url("./assets/brush2.png");
   --url2: url("./assets/brush2.png");
   --pos: -120px -150px;
   --pos2: top;
