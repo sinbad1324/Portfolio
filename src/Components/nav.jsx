@@ -29,7 +29,7 @@ export default function Nav() {
             <nav className="hidden sm:block" >
                 <ul className="  w-full h-full flex flex-row  gap-8">
                     {
-                        NavList.map((item , i) => (
+                        NavList.map((item, i) => (
                             <li key={item} className="max-w-10 w-10  md:w-16 md:max-w-20 text-nowrap  text-sm md:text-lg  text-center max-h-11 h-11  flex justify-center items-center " >
                                 <a onClick={onHandle} href={"/#" + navEN[i]} className={`${select == item ? "bg-l-vert-7 rounded-2xl hover:bg-l-vert-8 dark:bg-d-vert-7 dark:hover:bg-d-vert-8 dark:text-d-vert-12 " : ""} active:animate-click w-fit px-2 py-1 text-center`} >
                                     <span className="transition-all ease-in duration-75  hover:text-xl" >
