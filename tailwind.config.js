@@ -82,6 +82,7 @@ export default {
           "0%, 40%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(200px)" },
         },
+
       },
     },
   },

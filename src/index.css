@@ -37,7 +37,10 @@ small {
 
 .rootMain {
   display: grid;
-  grid-template-rows: calc(100vh - var(--row-header)) 100vh;
+  grid-template-rows: calc(100vh - var(--row-header)) minmax(100vh, auto) minmax(
+      70vh,
+      auto
+    );
 }
 
 .TextShadow {
@@ -54,4 +57,16 @@ small {
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 100%;
+}
+
+.brushmask {
+  --url: url("https://static.vecteezy.com/system/resources/previews/008/477/243/non_2x/black-brush-stroke-cut-out-free-png.png");
+  --url2: url("./assets/brush2.png");
+  --pos: -120px -150px;
+  --pos2: top;
+  -webkit-mask-image: var(--url2);
+  mask-image: var(--url2);
+  mask-position: -20px -100px;
+  mask-repeat: no-repeat;
+  mask-size: 120%;
 }
