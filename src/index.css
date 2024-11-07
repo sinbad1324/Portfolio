@@ -37,10 +37,11 @@ small {
 
 .rootMain {
   display: grid;
-  grid-template-rows: calc(100vh - var(--row-header)) minmax(100vh, auto) minmax(
-      70vh,
-      auto
-    );
+  grid-template-rows:
+    calc(100vh - var(--row-header))
+    minmax(100vh, auto)
+    minmax(100vh, auto)
+    minmax(100vh, auto);
 }
 
 .TextShadow {
