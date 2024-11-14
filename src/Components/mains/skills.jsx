@@ -6,16 +6,24 @@ import { useEffect, useState, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { SkillBtns } from "./skillsBtns";
+import reactLogo from "../../assets/react.svg"
+import jsLogo from "../../assets/js.svg"
+import nodejsLogo from "../../assets/nodeJS.svg"
+import nuxtJSLogo from "../../assets/nuxtJS.svg"
+import sassLogo from "../../assets/sass.svg"
+import tailwindcssLogo from "../../assets/tailwindcss.svg"
+
+
 const navEN = en.Header.nav;
 
 export const Skills = () => {
 
-    const mySkills = [{ title: "React" }, { title: "JavaScript" }, { title: "Tailwind" }, { title: "Sass/Scss" }, { title: "NodeJS" }, { title: "NuxtJS" }]
+    const mySkills = [{ title: "React" , logo:reactLogo }, { title: "JavaScript" , logo:jsLogo}, { title: "Tailwind",logo:tailwindcssLogo }, { title: "Sass/Scss",logo:sassLogo }, { title: "NodeJS",logo:nodejsLogo }, { title: "NuxtJS" ,logo:nuxtJSLogo }]
 
     return (
-        <div className=" relative bg-transparent w-full h-full row-start-4 row-end-5 flex  justify-center  items-center flex-col ">
+        <div className=" relative bg-transparent w-full h-full bg-black row-start-4 row-end-5 flex  justify-start  items-center flex-col ">
 
-            <div className="w-full h-fit flex flex-row justify-center items-center md:justify-start">
+            <div className="w-full pl-5 h-fit flex flex-row justify-center items-center md:justify-start">
                 <div
 
                     className=" hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
@@ -24,7 +32,7 @@ export const Skills = () => {
                 </div>
             </div>
 
-            <div className="m-4 w-[70%] h-[80%] grid grid-cols-2 grid-rows-2 bg-transparent justify-center items-center place-content-center p-14">
+            <div className="m-4 w-[60%] h-[630px] grid grid-cols-2 grid-rows-2 bg-transparent justify-center items-center place-content-center p-14">
                 {/* grid grid-cols-6 grid-rows-2 */}
                 {
                     mySkills.map((item, i) => {
@@ -35,7 +43,7 @@ export const Skills = () => {
                                 row={(i + 1) > 3 ? 2 : 1}
                                 key={i}
                                 title={item.title}
-
+                                icon={item.logo}
                             />
                         )
                     })

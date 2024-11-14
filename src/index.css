@@ -40,8 +40,8 @@ small {
   grid-template-rows:
     calc(100vh - var(--row-header))
     minmax(100vh, auto)
-    minmax(100vh, auto)
-    minmax(100vh, auto);
+    minmax(70vh, auto)
+    minmax(50vh, auto);
 }
 
 .TextShadow {
