@@ -9,12 +9,11 @@ export default function App() {
   };
 
 
-  
+
 
   return (
     <>
-    
-      <div onScroll={scrollHandle} className=" rootBody bg-[#F2F2F2] dark:bg-d-color relative overflow-x-hidden overflow-y-auto w-screen h-screen">
+      <div onScroll={scrollHandle} className=" rootBody bg-[#F2F2F2] dark:bg-d-color  relative overflow-x-hidden overflow-y-auto w-screen h-screen">
         <Header isScroll={IsScroll} />
         <Main />
         <Footer />

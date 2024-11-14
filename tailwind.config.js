@@ -60,13 +60,12 @@ export default {
 
       backgroundImage: {
         "d-color":
-          "linear-gradient(360deg, rgba(26,33,45,1) 0%, rgba(27,38,56,1) 29%, rgba(27,42,68,1) 44%, rgba(26,52,93,1) 100%)",
+          "linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(1,10,28,1) 71%, rgba(1,22,64,1) 91%, rgba(0,32,96,1) 100%)",
       },
       animation: {
         click: "click 0.2s ease-in-out forwards",
         YApear: "YApear 0.4s ease-in-out forwards",
         Ydispear: "YdisApear 0.4s ease-in-out forwards",
-
       },
       keyframes: {
         click: {
@@ -82,7 +81,6 @@ export default {
           "0%, 40%": { transform: "translateY(0)" },
           "100%": { transform: "translateY(200px)" },
         },
-
       },
     },
   },

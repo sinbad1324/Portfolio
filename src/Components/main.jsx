@@ -2,6 +2,7 @@ import { About } from "./mains/About";
 import { Project } from "./mains/Projets";
 import { MainHeader } from "./mains/mainHeader"
 import { Skills } from "./mains/skills"
+import { ProjectsWeb } from "./mains/projectsV2";
 //import pentagon from "../assets/pentagon"
 
 export default function Main() {
@@ -14,8 +15,9 @@ export default function Main() {
 
             <MainHeader />
             <About />
-            <Project />
             <Skills />
+            <Project />
+            <ProjectsWeb />
 
         </main>
     );

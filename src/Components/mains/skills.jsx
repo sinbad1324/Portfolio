@@ -18,7 +18,7 @@ const navEN = en.Header.nav;
 
 export const Skills = () => {
 
-    const mySkills = [{ title: "React" , logo:reactLogo }, { title: "JavaScript" , logo:jsLogo}, { title: "Tailwind",logo:tailwindcssLogo }, { title: "Sass/Scss",logo:sassLogo }, { title: "NodeJS",logo:nodejsLogo }, { title: "NuxtJS" ,logo:nuxtJSLogo }]
+    const mySkills = [{ title: "React", logo: reactLogo }, { title: "JavaScript", logo: jsLogo }, { title: "Tailwind", logo: tailwindcssLogo }, { title: "Sass/Scss", logo: sassLogo }, { title: "NodeJS", logo: nodejsLogo }, { title: "NuxtJS", logo: nuxtJSLogo }]
 
     return (
         <div className=" relative bg-transparent w-full h-full bg-black row-start-4 row-end-5 flex  justify-start  items-center flex-col ">
