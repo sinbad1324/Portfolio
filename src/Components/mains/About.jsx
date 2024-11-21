@@ -1,6 +1,6 @@
 import en from "../../data/lang/en/lang.json";
 import { useEffect, useState, useRef } from "react";
-
+import { Line } from "../line";
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
 
@@ -105,6 +105,8 @@ export const About = () => {
                     </a>
                 </div>
             </div>
+            <Line />
+
         </div>
     )
 }

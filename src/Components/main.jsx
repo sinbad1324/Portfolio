@@ -19,7 +19,8 @@ export default function Main() {
             <Skills />
             <Project />
             <ProjectsWeb />
-            <Contact/>
+            <Contact />
+
         </main>
     );
 }
