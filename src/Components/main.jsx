@@ -3,6 +3,7 @@ import { Project } from "./mains/Projets";
 import { MainHeader } from "./mains/mainHeader"
 import { Skills } from "./mains/skills"
 import { ProjectsWeb } from "./mains/projectsV2";
+import { Contact } from "./mains/contact";
 //import pentagon from "../assets/pentagon"
 
 export default function Main() {
@@ -18,7 +19,7 @@ export default function Main() {
             <Skills />
             <Project />
             <ProjectsWeb />
-
+            <Contact/>
         </main>
     );
 }
