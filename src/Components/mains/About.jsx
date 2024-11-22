@@ -35,9 +35,10 @@ export const About = () => {
         };
     }, []);
     return (
-        <div
+       <div className="bg-transparent w-full h-full row-start-2 row-end-3 flex flex-col justify-around items-center">
+         <div
             ref={AboutDiv}
-            className=" bg-transparent w-full h-full row-start-2 row-end-3 flex md:flex-row  md:justify-between justify-center  items-center  md:items-start flex-col-reverse "
+            className="  flex md:flex-row  md:justify-between justify-center  items-center  md:items-start flex-col-reverse "
         >
             <div className="md:w-[40vw] w-full flex  justify-center  items-center ">
                 <div
@@ -105,8 +106,9 @@ export const About = () => {
                     </a>
                 </div>
             </div>
-            <Line />
 
         </div>
+        <Line />
+       </div>
     )
 }

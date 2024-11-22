@@ -22,8 +22,7 @@ export const Skills = () => {
     const mySkills = [{ title: "React", logo: reactLogo }, { title: "JavaScript", logo: jsLogo }, { title: "Tailwind", logo: tailwindcssLogo }, { title: "Sass/Scss", logo: sassLogo }, { title: "NodeJS", logo: nodejsLogo }, { title: "NuxtJS", logo: nuxtJSLogo }]
 
     return (
-        <div className=" relative bg-transparent w-full h-full bg-black row-start-4 row-end-5 flex  justify-start  items-center flex-col ">
-            <Line />
+        <div className=" relative bg-transparent w-full h-fit   row-start-4 row-end-5 flex  justify-between  items-center flex-col ">
             <div className="mb-11 "></div>
             <div className="w-full pl-5 h-fit flex flex-row justify-center items-center md:justify-start">
                 <div

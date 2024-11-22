@@ -2,6 +2,7 @@ import en from "../../data/lang/en/lang.json";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Line } from "../line";
+import { div } from "framer-motion/client";
 
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
@@ -49,10 +50,10 @@ export const Project = () => {
     }, []);
 
     return (
-        <>
-            <div className=" bg-transparent w-full h-full row-start-3 row-end-4 flex md:flex-row-reverse  md:justify-between justify-center  items-center  md:items-start flex-col-reverse ">
+        <div className="w-full h-fit row-start-3 row-end-4 flex-col justify-between  ">
+            <div className="  flex md:flex-row-reverse  md:justify-between justify-center  items-center  md:items-start flex-col-reverse ">
                 <div className="md:w-[50vw] w-full flex  justify-center  items-center ">
-                    <div className="ml-5 h-auto md:rounded-xl rounded-md max-h-[700px]   w-full   md:mt-0  mr-10 mt-10 bg-transparent  shadow-md ">
+                    <div className="ml-5 h-auto md:rounded-xl rounded-md max-h-[700px]  w-full   md:mt-0  mr-10 mt-10 bg-transparent  shadow-md ">
                         <video className="rounded-lg w-full h-full" autoPlay muted controls>
                             <source
                                 src="https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4"
@@ -61,7 +62,7 @@ export const Project = () => {
                         </video>
                     </div>
                 </div>
-                <div className="md:h-auto  md:max-h-[700px] md:w-[50vw]  w-full max-h-[1000px]    bg-transparent pr-6 p-4 overflow-hidden   rounded-lg  flex flex-col justify-start items-start lg:gap-6  gap-2   ">
+                <div className="md:h-auto  md:max-h-[500px] md:w-[50vw]  w-full max-h-[1000px]    bg-transparent pr-6 p-4 overflow-hidden   rounded-lg  flex flex-col justify-start items-start lg:gap-6  gap-2   ">
                     <div className="w-full h-fit flex flex-row justify-center items-center md:justify-start">
                         <div
                             ref={skills}
@@ -108,6 +109,9 @@ export const Project = () => {
                     </div>
                 </div>
             </div>
-        </>
+            <div className="mt-10">
+        <Line/>
+        </div>
+        </div>
     )
 }

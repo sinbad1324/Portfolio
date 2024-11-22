@@ -4,103 +4,110 @@ import { useEffect, useState, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { GoArrowRight } from "react-icons/go";
+import { Line } from "../line";
+
+function generateRandomColor() {
+  let maxVal = 0xffffff; // 16777215
+  let randomNumber = Math.random() * maxVal;
+  randomNumber = Math.floor(randomNumber);
+  let randomColor = randomNumber.toString(16);
+  return `#${randomColor.padStart(6, 0)}`;
+}
 
 //import { ArrowRight } from "@radix-ui/react-icons"
-
+const Images = [
+  "/src/assets/carre.png",
+  "/src/assets/cercle-border.png",
+  "/src/assets/cercle.png",
+  "/src/assets/demi-cercle.png",
+  "/src/assets/tr-border.png",
+  "/src/assets/triangl.png",
+];
 const navEN = en.Header.nav;
 
+const CreateForm = () => {
+  const radomForm = Images[Math.floor(Math.random() * Images.length)];
+  const refimg = useRef();
+  return (
+    <>
+      <img  className={`size-16`} style={{ filter:`hue-rotate(${Math.random() * 360}deg)`}} src={radomForm} />
+    </>
+  );
+};
 
 const blockEle = () => {
-    return (
-        <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-        <div className="flex flex-col justify-between items-end gap-2">
-            <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
-            <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
-            <motion.div
-                whileHover={{ scale: 1.1, transition: { type: "tween", duration: .1 } }}
-                whileTap={{ scale: 0.8, transition: { type: "tween", duration: .1 } }}
-                className="flex flex-row items-center" >
-                <motion.button
-                    className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-d-blue-10 text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
-                    Got to see
-                </motion.button>
-                <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
-            </motion.div>
-        </div>
+  return (
+    <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
+      <div className="flex flex-col justify-between items-end gap-2">
+        <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
+        <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+            transition: { type: "tween", duration: 0.1 },
+          }}
+          whileTap={{
+            scale: 0.8,
+            transition: { type: "tween", duration: 0.1 },
+          }}
+          className="flex flex-row items-center"
+        >
+          <motion.button className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-d-blue-10 text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
+            Got to see
+          </motion.button>
+          <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
+        </motion.div>
+      </div>
     </div>
-
-    )
-}
+  );
+};
 
 export const ProjectsWeb = () => {
+  return (
+    <div className=" relative  w-full h-full row-start-5 row-end-6 flex-col ">
+      <div className=" absolute top-0 left-0 w-full h-full">
+        {Array.from({ length: 8 }, (_, i) => {
+          return <CreateForm key={i} />;
+        })}
+      </div>
+      <div className=" bg-transparent felx flex-col  w-full h-full text-l-blue-12 dark:text-d-blue-12">
+        <div className="w-full h-fit flex flex-row justify-center items-center md:justify-start">
+          <div
+            id={navEN[3]}
+            className=" ml-5 hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
+          >
+            {navEN[3]}.
+          </div>
+        </div>
 
-    return (
-        <div className="row-start-5 row-end-6 bg-transparent felx flex-col  w-full h-full text-l-blue-12 dark:text-d-blue-12">
-            <div className="w-full h-fit flex flex-row justify-center items-center md:justify-start">
-                <div
-                    id={navEN[3]}
-                    className=" ml-5 hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
-                >
-                    {navEN[3]}.
-                </div>
+        <div className="w-full h-full flex flex-col justify-center items-center gap-10  text-l-vert-11 dark:text-d-vert-11">
+          <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
+            <div className="flex flex-col justify-between items-end gap-2">
+              <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
+              <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
+              <motion.div
+                whileHover={{
+                  scale: 1.1,
+                  transition: { type: "tween", duration: 0.1 },
+                }}
+                whileTap={{
+                  scale: 0.8,
+                  transition: { type: "tween", duration: 0.1 },
+                }}
+                className="flex flex-row items-center"
+              >
+                <motion.button className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-l-blue-10 group-even:from-d-blue-5 group-even:to-l-blue-7  text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
+                  Got to see
+                </motion.button>
+                <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
+              </motion.div>
             </div>
-
-            <div className="w-full h-full flex flex-col justify-center items-center gap-10  text-l-vert-11 dark:text-d-vert-11">
-
-                <blockEle></blockEle>
-
-                <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-                    <div className="flex flex-col justify-between items-end gap-2">
-                        <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
-                        <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
-                        <motion.div
-                            whileHover={{ scale: 1.1, transition: { type: "tween", duration: .1 } }}
-                            whileTap={{ scale: 0.8, transition: { type: "tween", duration: .1 } }}
-                            className="flex flex-row items-center" >
-                            <motion.button
-                                className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-d-blue-10 text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
-                                Got to see
-                            </motion.button>
-                            <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
-                        </motion.div>
-                    </div>
-                </div>
-
-                <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-                    <div className="flex flex-col justify-between items-end gap-2">
-                        <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
-                        <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
-                        <motion.div
-                            whileHover={{ scale: 1.1, transition: { type: "tween", duration: .1 } }}
-                            whileTap={{ scale: 0.8, transition: { type: "tween", duration: .1 } }}
-                            className="flex flex-row items-center" >
-                            <motion.button
-                                className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-d-blue-10 text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
-                                Got to see
-                            </motion.button>
-                            <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
-                        </motion.div>
-                    </div>
-                </div>
-
-                <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-                    <div className="flex flex-col justify-between items-end gap-2">
-                        <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
-                        <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
-                        <motion.div
-                            whileHover={{ scale: 1.1, transition: { type: "tween", duration: .1 } }}
-                            whileTap={{ scale: 0.8, transition: { type: "tween", duration: .1 } }}
-                            className="flex flex-row items-center" >
-                            <motion.button
-                                className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-d-blue-10 text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
-                                Got to see
-                            </motion.button>
-                            <GoArrowRight className="  dark:text-d-vert-12  text-l-vert-12  dark:group-even:text-d-blue-12 group-even:text-l-blue-12 block size-8" />
-                        </motion.div>
-                    </div>
-                </div>
-            </div>
-
-        </div >
-    )
-}
+          </div>
+        </div>
+      </div>
+      <div className="mt-5">
+        <Line />
+      </div>
+    </div>
+  );
+};

@@ -44,13 +44,13 @@ export const Contact = () => {
                                 <a className="hover:underline  text-l-vert-12 dark:text-d-vert-12 " href="mailto:mohammad.izdpn@eduge.ch">mohammad.izdpn@eduge.ch</a>
                             </div>
                             <motion.button
-                                className="flex flex-row gap-2 font-bold text-lg text-d-vert-12 rounded-sm dark:text-l-vert-12 bg-d-blue-3 dark:bg-white p-2 "
+                                className="flex flex-row gap-2 font-bold text-lg text-d-vert-12 rounded-sm dark:text-l-vert-12 bg-d-blue-3 dark:bg-white p-2 hover:bg-l-blue-4 hover:text-l-blue-11 hover:dark:bg-d-blue-3 hover:dark:text-d-vert-11 "
                                 type="submit"
-                                whileHover={{ scale: 1.2, transition: { type: "tween", duration: .1 } }}
+                                whileHover={{ scale: 1.2 , transition: { type: "tween", duration: .1 } }}
                                 whileTap={{ scale: 0.7, transition: { type: "spring", stiffness: 50, damping: 5, duration: .1 } }}
 
                             >
-                                Hit us up <RocketIcon className="size-6 text-d-vert-12 dark:text-l-vert-12" />
+                                Hit us up <RocketIcon className="size-6 text-d-vert-12 dark:text-l-vert-12 hover:dark:text-d-vert-11 " />
                             </motion.button>
                         </div>
                     </form>
