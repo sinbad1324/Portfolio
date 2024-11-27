@@ -5,8 +5,9 @@ import { Skills } from "./mains/skills"
 import { ProjectsWeb } from "./mains/projectsV2";
 import { Contact } from "./mains/contact";
 //import pentagon from "../assets/pentagon"
-
+//https://safetpojskic.com/
 export default function Main() {
+    const params = new URLSearchParams(window.location.search).get("settings")
 
     //Observe
     // eslint-disable-next-line no-unused-vars
@@ -17,8 +18,7 @@ export default function Main() {
             <MainHeader />
             <About />
             <Skills />
-            <Project />
-            <ProjectsWeb />
+            {params.toLowerCase() == "roblox" ? <Project /> : <ProjectsWeb />}
             <Contact />
 
         </main>

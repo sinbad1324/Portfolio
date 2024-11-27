@@ -11,7 +11,7 @@ export const Contact = () => {
     return (
         <>
             <div
-                className=" bg-transparent w-full h-full row-start-6 row-end-7 flex md:flex-col  md:justify-start justify-center  items-center  md:items-start flex-col-reverse mt-16 gap-10 "
+                className="  w-full h-full row-start-5 row-end-6 flex md:flex-col  md:justify-start justify-center  items-center  md:items-start flex-col-reverse mt-16 gap-10 "
             >
                 <div
                     id={navEN[4]}
@@ -20,7 +20,7 @@ export const Contact = () => {
                     {navEN[4]}.
                 </div>
 
-                <div className="w-full h-fit flex flex-row justify-start items-start md:justify-start text-l-blue-11 dark:text-d-vert-11 gap-10 bg-transparent p-10">
+                <div className=" w-full h-fit flex flex-row justify-start items-start md:justify-start text-l-blue-11 dark:text-d-vert-11 gap-10 bg-transparent p-10">
                     <div className="w-1/2 flex flex-col justify-start items-start pl-28" >
                         <h1 className="text-6xl font-bold">Avez vous besoin daide</h1>
                         <p className="text-xl font-bold mt-4"> wjebfweékjfbwàoefnwàgfbwgfb <span className="text-l-blue-12 dark:text-d-vert-12" >ewdwd</span></p>
@@ -46,7 +46,7 @@ export const Contact = () => {
                             <motion.button
                                 className="flex flex-row gap-2 font-bold text-lg text-d-vert-12 rounded-sm dark:text-l-vert-12 bg-d-blue-3 dark:bg-white p-2 hover:bg-l-blue-4 hover:text-l-blue-11 hover:dark:bg-d-blue-3 hover:dark:text-d-vert-11 "
                                 type="submit"
-                                whileHover={{ scale: 1.2 , transition: { type: "tween", duration: .1 } }}
+                                whileHover={{ scale: 1.2, transition: { type: "tween", duration: .1 } }}
                                 whileTap={{ scale: 0.7, transition: { type: "spring", stiffness: 50, damping: 5, duration: .1 } }}
 
                             >

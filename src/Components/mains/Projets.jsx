@@ -50,7 +50,7 @@ export const Project = () => {
     }, []);
 
     return (
-        <div className="w-full h-fit row-start-3 row-end-4 flex-col justify-between  ">
+        <div className="w-full h-fit row-start-4 row-end-5 flex-col justify-between  ">
             <div className="  flex md:flex-row-reverse  md:justify-between justify-center  items-center  md:items-start flex-col-reverse ">
                 <div className="md:w-[50vw] w-full flex  justify-center  items-center ">
                     <div className="ml-5 h-auto md:rounded-xl rounded-md max-h-[700px]  w-full   md:mt-0  mr-10 mt-10 bg-transparent  shadow-md ">
@@ -110,8 +110,8 @@ export const Project = () => {
                 </div>
             </div>
             <div className="mt-10">
-        <Line/>
-        </div>
+                <Line />
+            </div>
         </div>
     )
 }
