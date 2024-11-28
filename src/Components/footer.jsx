@@ -4,7 +4,7 @@ import DiscordIcon from "./Icons/discord";
 import InstaIcon from "./Icons/instagram";
 export default function Footer() {
     return (
-        <footer className="row-start-3 row-end-4 w-full h-full bg-d-blue-1/5 flex flex-col justify-center items-center gap-5 text-d-vert-12 text-xl">
+        <footer className="row-start-3 row-end-4 w-full h-full bg-d-blue-1/5 flex flex-col justify-center items-center gap-5 text-l-vert-12  dark:text-d-vert-12 text-xl">
             <div className=" flex flex-row justify-center items-center gap-5 ">
                 <p>&copy;2024-2025</p>
                 <p className="font-bold cursor-pointer ">Izadpanah Mohammad</p>

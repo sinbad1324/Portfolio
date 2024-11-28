@@ -31,16 +31,14 @@ export const Skills = () => {
                     {navEN[2]}.
                 </div>
             </div>
-
-            <div className="m-4 w-[60%] h-[630px] grid grid-cols-2 grid-rows-2 bg-transparent justify-center items-center place-content-center p-14">
+            {/* grid grid-cols-2 grid-rows-2 bg-transparent justify-center items-center place-content-center */}
+            <div className="m-4 md:w-[80%] w-[100%] h-[630px] p-14 flex flex-row flex-wrap justify-center items-center gap-7">
                 {/* grid grid-cols-6 grid-rows-2 */}
                 {
                     mySkills.map((item, i) => {
                         return (
                             ////+ "row-start-" + (index + 1) + "col-start-" + (index + 2)
                             <SkillBtns
-                                col={(i + 1) < 3 ? (i + 1) : (i + 1) - 3}
-                                row={(i + 1) > 3 ? 2 : 1}
                                 key={i}
                                 title={item.title}
                                 icon={item.logo}

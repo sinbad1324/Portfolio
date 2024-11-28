@@ -87,8 +87,8 @@ const CreateForm = ({ ContainerRef, className }) => {
 // eslint-disable-next-line no-unused-vars
 const BlockEle = () => {
   return (
-    <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[800px] h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-      <div className="flex flex-col justify-between items-end gap-2">
+    <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[50%] max-w-[800px] h-[50vw] max-h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
+      <div className="flex flex-col justify-between items-end gap-2 ">
         <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
         <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
         <motion.div
@@ -100,7 +100,7 @@ const BlockEle = () => {
             scale: 0.8,
             transition: { type: "tween", duration: 0.1 },
           }}
-          className="flex flex-row items-center"
+          className="flex flex-row items-center "
         >
           <motion.button className="text-lg font-bold rounded-md bg-gradient-to-r dark:group-even:from-d-blue-5 dark:group-even:to-l-blue-10 group-even:from-d-blue-5 group-even:to-l-blue-7  text-white dark:from-d-vert-5 from-l-vert-10 to-l-vert-5  dark:to-d-vert-10 p-2 pl-5 pr-5">
             Got to see
@@ -116,8 +116,8 @@ export const ProjectsWeb = () => {
   const FormsContainer = useRef()
 
   return (
-    <div className=" relative group w-full h-full row-start-4 row-end-3 flex-col ">
-      <div className=" absolute  group-hover:blur-sm blur-none top-0 left-0 w-full h-full ">
+    <div className=" relative group w-full h-full row-start-4 row-end-5 flex-col ">
+      <div className=" absolute  group-hover:blur-sm blur-none top-0 left-0 w-full h-full  hidden md:block  overflow-hidden ">
         <div ref={FormsContainer} className="  relative top-0 left-0 w-full h-full ">
           {Array.from({ length: 25 }, (_, i) => {
             return <CreateForm className="w-16 h-16 hover:scale-110 cursor-pointer" ContainerRef={FormsContainer} key={i} />;

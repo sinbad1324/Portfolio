@@ -11,16 +11,16 @@ export default function Main() {
 
     //Observe
     // eslint-disable-next-line no-unused-vars
-
+    console.log(params);
+    
     return (
         <main className=" z-0 rootMain row-start-2 row-end-3 ">
 
             <MainHeader />
             <About />
             <Skills />
-            {params.toLowerCase() == "roblox" ? <Project /> : <ProjectsWeb />}
+            {params == undefined |null ?  <ProjectsWeb /> :params.toLowerCase() == "roblox" ? <Project /> : <ProjectsWeb />}
             <Contact />
-
         </main>
     );
 }

@@ -57,6 +57,12 @@ export default {
         "l-vert-11": " #006452",
         "l-vert-12": " #00291f",
       },
+      fontSize: {
+        clamp: "clamp(1rem, 5vw, 3rem)",
+        "clamp-1": "clamp(.75rem, 2.5vw, 1.75rem)",
+        "clamp-5": "clamp(1rem, 5vw, 4rem)",
+
+      },
 
       backgroundImage: {
         "d-color":
