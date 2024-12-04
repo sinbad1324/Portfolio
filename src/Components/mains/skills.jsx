@@ -35,7 +35,7 @@ export const Skills = () => {
     }
 
     return (
-        <div className=" relative bg-transparent w-full h-fit   row-start-3 row-end-4 flex  justify-between  items-center flex-col ">
+        <div className=" relative bg-transparent w-full h-auto   row-start-3 row-end-4 flex  justify-between  items-center flex-col ">
             <div className="mb-11 "></div>
             <div className="w-full pl-5 h-fit flex flex-row justify-center items-center md:justify-start">
                 <div

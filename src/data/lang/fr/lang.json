@@ -8,6 +8,22 @@
             "Contact"
         ]
     },
-    "Main": {},
+    "Main": {
+        "About": {
+            "p": {
+                "web": [
+                    "Je m'appelle Izaspanah Mohammad, et je suis passionné par la programmation. Bien que mon expertise actuelle se concentre sur le développement web, je m'intéresse vivement au machine learning, un domaine dans lequel j'aspire à travailler dans le futur.",
+                    "Actuellement étudiant en informatique avec une spécialisation en programmation, j'ai déjà acquis deux années d'expérience pratique en développement web. Cette expérience m'a permis de renforcer mes compétences techniques, d'améliorer ma créativité et de développer une approche méthodique pour résoudre des problèmes.",
+                    "À seulement 18 ans, je suis une personne motivée, rapide et efficace dans mon travail. Je suis toujours prêt à relever de nouveaux défis, à apprendre et à évoluer pour donner le meilleur de moi-même dans tous les projets auxquels je participe."
+                ],
+                "roblox": [
+                    "Je m'appelle Izaspanah Mohammad, et ma spécialité réside dans la création et le développement sur Roblox Studio. Je suis passionné par la conception de jeux interactifs et immersifs, où créativité et compétences techniques se rejoignent pour offrir des expériences uniques. Bien que mon domaine principal soit Roblox Studio, j’ai également des compétences en développement web, un domaine dans lequel j'ai acquis une solide base.",
+                    "Actuellement étudiant en informatique avec une spécialisation en programmation, j'ai déjà accumulé plusieurs années d'expérience dans la création de projets sur Roblox Studio et dans le développement web. Ces expériences m'ont permis de maîtriser des outils essentiels, de collaborer efficacement avec des équipes et de transformer des idées en projets concrets.",
+                    "À seulement 18 ans, je suis une personne déterminée, rapide et efficace. Mon objectif est de continuer à innover dans la création de contenus numériques, notamment sur Roblox, tout en élargissant mes compétences vers des technologies émergentes."
+                ]
+            },
+            "CV": "CV"
+        }
+    },
     "Footer": {}
 }

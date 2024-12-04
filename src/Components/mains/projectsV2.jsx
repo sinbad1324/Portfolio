@@ -87,10 +87,10 @@ const CreateForm = ({ ContainerRef, className }) => {
 // eslint-disable-next-line no-unused-vars
 const BlockEle = () => {
   return (
-    <div className="group even:dark:text-d-blue-11 even:text-l-blue-11 even:ml-36 w-[50%] max-w-[800px] h-[50vw] max-h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
-      <div className="flex flex-col justify-between items-end gap-2 ">
-        <h2 className="text-3xl font-extrabold">Project studios maxi</h2>
-        <h3 className="text-xl italic">ewqdqwdqdqwdqwqwd</h3>
+    <div className="group even:dark:text-d-blue-11  even:text-l-blue-11 md:even:ml-36  md:w-[50%] max-w-[800px] w-[95%] h-[95vw] md:h-[50vw] max-h-[500px] bg-[url('https://www.lecomptoirweb.fr/wp-content/uploads/2020/06/d%C3%A9co-bois-1.jpg')] bg-center bg-cover flex justify-end items-end pr-24 pb-24">
+      <div className="flex flex-col justify-between items-end gap-2 w-fit h-fit ">
+        <h2 className="text-clamp font-extrabold">Project studios maxi</h2>
+        <h3 className="text-clamp-1 italic">ewqdqwdqdqwdqwqwd</h3>
         <motion.div
           whileHover={{
             scale: 1.1,

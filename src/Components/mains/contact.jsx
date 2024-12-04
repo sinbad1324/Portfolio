@@ -5,8 +5,24 @@ import { RocketIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import { Line } from "../line";
 const navEN = en.Header.nav;
-
+const url = "http://localhost:3000/mail"
 export const Contact = () => {
+    const form = useRef()
+    const onSubmit = (event) => {
+        event.preventDefault()
+        // eslint-disable-next-line no-unused-vars
+        const formData = new FormData(form.current);
+        fetch(url, {
+            method: "post",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name: formData.get("name"), mail: formData.get("email"), message: formData.get("message") })
+        }).then(response => {
+            console.log(response);
+        })
+    }
 
     return (
         <>
@@ -25,18 +41,18 @@ export const Contact = () => {
                         <h1 className=" text-clamp-5 md:text-6xl font-bold">Avez vous besoin daide</h1>
                         <p className="text-clamp-1 md:text-xl font-bold mt-4"> wjebfweékjfbwàoefnwàgfbwgfb <span className="text-l-blue-12 dark:text-d-vert-12" >ewdwd</span></p>
                     </div>
-                    <form className="md:w-1/2  w-full  h-full flex flex-col justify-center items-center gap-3">
+                    <form ref={form} className="md:w-1/2  w-full  h-full flex flex-col justify-center items-center gap-3">
                         <div className="flex flex-col md:w-1/2  w-3/4  gap-1">
                             <label htmlFor="name">Name:</label>
-                            <input id="name" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="text" required placeholder="Name..." />
+                            <input id="name" name="name" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="text" required placeholder="Name..." />
                         </div>
                         <div className="flex flex-col md:w-1/2  w-3/4 gap-1">
                             <label htmlFor="mail">E-Mail:</label>
-                            <input id="mail" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="email" required placeholder="Mail..." />
+                            <input id="mail" name="email" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="email" required placeholder="Mail..." />
                         </div>
                         <div className="flex flex-col md:w-1/2  w-3/4 gap-1">
                             <label htmlFor="Message">Message:</label>
-                            <textarea id="Message" className="w-full min-h-20 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 p-3" required placeholder="Message..." ></textarea>
+                            <textarea id="Message" name="message" className="w-full min-h-20 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 p-3" required placeholder="Message..." ></textarea>
                         </div>
                         <div className="flex md:flex-row justify-between md:w-1/2 md:gap-0 gap-5  w-3/4 flex-col ">
                             <div className="flex flex-row gap-2 justify-center items-center">
@@ -48,7 +64,7 @@ export const Contact = () => {
                                 type="submit"
                                 whileHover={{ scale: 1.2, transition: { type: "tween", duration: .1 } }}
                                 whileTap={{ scale: 0.7, transition: { type: "spring", stiffness: 50, damping: 5, duration: .1 } }}
-
+                                onClick={onSubmit}
                             >
                                 Hit us up <RocketIcon className="size-6 text-d-vert-12 dark:text-l-vert-12 hover:dark:text-d-vert-11 " />
                             </motion.button>

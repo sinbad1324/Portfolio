@@ -1,11 +1,16 @@
 import en from "../../data/lang/en/lang.json";
+import fr from "../../data/lang/fr/lang.json";
+
 import { useEffect, useState, useRef } from "react";
 import { Line } from "../line";
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
-
+const AboutLang = fr.Main.About;
+let paragraph = "web"
 // eslint-disable-next-line react/prop-types
 export const About = () => {
+    const params = new URLSearchParams(window.location.search).get("settings")
+    if (params && params.toLowerCase() == "roblox") paragraph = "roblox"
     const [show, setShow] = useState(false);
     const About = useRef();
     const AboutDiv = useRef();
@@ -34,6 +39,7 @@ export const About = () => {
             obs.disconnect();
         };
     }, []);
+
     return (
         <div className="bg-transparent w-full h-full row-start-2 row-end-3 flex flex-col justify-around items-center">
             <div
@@ -62,47 +68,29 @@ export const About = () => {
                         </div>
                     </div>
                     <div className="w-full lg:text-xl text-lg font-light text-l-blue-12 dark:text-d-blue-12 h-fit flex flex-col  items-start justify-center lg:gap-5 gap-3 ">
-                        <div className="w-full h-fit overflow-hidden max-h-[200px] ">
-                            <p
-                                className={`relative ${show == true ? "animate-YApear" : "animate-Ydispear"
-                                    }`}
-                            >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Eligendi perspiciatis, expedita doloremque eos ab sequi labore
-                                voluptatibus dolore voluptatem. Dolores cum cupiditate optio ea
-                                reiciendis veniam officia maxime sunt consequatur?
-                            </p>
-                        </div>
-                        <div className="w-full h-fit overflow-hidden max-h-[200px] ">
-                            <p
-                                className={`relative ${show == true ? "animate-YApear" : "animate-Ydispear"
-                                    }`}
-                            >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Eligendi perspiciatis, expedita doloremque eos ab sequi labore
-                                voluptatibus dolore voluptatem. Dolores cum cupiditate optio ea
-                                reiciendis veniam officia maxime sunt consequatur?
-                            </p>
-                        </div>
 
-                        <div className="w-full h-fit overflow-hidden max-h-[200px] ">
-                            <p
-                                className={`relative ${show == true ? "animate-YApear" : "animate-Ydispear"
-                                    }`}
-                            >
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Eligendi perspiciatis, expedita doloremque eos ab sequi labore
-                                voluptatibus dolore voluptatem. Dolores cum cupiditate optio ea
-                                reiciendis veniam officia maxime sunt consequatur?
-                            </p>
-                        </div>
+                        {AboutLang.p[paragraph].map((v, i) => {
+                            console.log(paragraph)
+                            return (
+                                <div key={i} className="w-full h-fit overflow-hidden max-h-[200px] ">
+                                    <p
+                                        className={`relative ${show == true ? "animate-YApear" : "animate-Ydispear"
+                                            }`}
+                                    >
+                                        {v}
+                                    </p>
+                                </div>
+                            )
+                        })}
+
+
                     </div>
                     <div className="w-full md:pr-8  h-fit  flex items-center justify-center  md:items-end  md:justify-end">
                         <a
                             id={navEN[1]}
                             className="active:animate-click hover:scale-110 hover:rounded-xl ease-in duration-75  transition-all  cursor-pointer w-24 h-12 flex justify-center items-center rounded-lg  bg-l-blue-7 dark:bg-d-blue-4 text-xl text-l-blue-12 dark:text-d-blue-12 border  border-d-blue-3 dark:border-d-blue-10 "
                         >
-                            MyCV
+                            {AboutLang.CV}
                         </a>
                     </div>
                 </div>

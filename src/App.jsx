@@ -2,7 +2,6 @@ import Header from "./Components/header";
 import Main from "./Components/main";
 import Footer from "./Components/footer";
 import { useState } from "react";
-
 //https://excalidraw.com/#json=DSZPZiNaOKRJsPKWRDZCG,FRTWoqHiobU25dEs7Ggjdg
 
 export default function App() {
@@ -10,8 +9,6 @@ export default function App() {
   const scrollHandle = (event) => {
     setIsScroll(event.currentTarget.scrollTop > 0 ? false : true);
   };
-
-
 
 
   return (

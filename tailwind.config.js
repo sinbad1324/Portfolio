@@ -61,7 +61,7 @@ export default {
         clamp: "clamp(1rem, 5vw, 3rem)",
         "clamp-1": "clamp(.75rem, 2.5vw, 1.75rem)",
         "clamp-5": "clamp(1rem, 5vw, 4rem)",
-
+        "clamp-2": "clamp(.2rem, 2vw, 1.2rem)",
       },
 
       backgroundImage: {
