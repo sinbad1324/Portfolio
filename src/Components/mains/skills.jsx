@@ -4,6 +4,8 @@ import en from "../../data/lang/en/lang.json";
 import { useEffect, useState, useRef } from "react";
 import { Line } from "../line";
 
+import { getCurrentLang } from '../../data/getCurrentLang'
+import { useLangContext } from '../../hooks/useLangContext'
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import { SkillBtns } from "./skillsBtns";
@@ -26,6 +28,9 @@ import blender from "../../assets/blender.svg"
 const navEN = en.Header.nav;
 
 export const Skills = () => {
+        const CurrentContextLang = useLangContext();
+    const currentLang = getCurrentLang(CurrentContextLang.Lang);
+    const NavList = currentLang.Header.nav;
     const params = new URLSearchParams(window.location.search).get("settings")
     let mySkills
     if (params && params.toLowerCase() == "roblox") {
@@ -41,7 +46,7 @@ export const Skills = () => {
                 <div
                     className=" hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
                 >
-                    {navEN[2]}.
+                    {NavList[2]}.
                 </div>
             </div>
             {/* grid grid-cols-2 grid-rows-2 bg-transparent justify-center items-center place-content-center */}

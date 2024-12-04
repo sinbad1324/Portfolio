@@ -8,6 +8,32 @@
             "Contatto"
         ]
     },
-    "Main": {},
+    "Main": {
+        "About": {
+            "p": {
+                "web": [
+                    "Mi chiamo Izaspanah Mohammad e sono appassionato di programmazione. Sebbene la mia esperienza attuale si concentri sullo sviluppo web, sono molto interessato al machine learning, un campo in cui aspiro a lavorare in futuro.",
+                    "Attualmente sono uno studente di informatica con specializzazione in programmazione e ho già acquisito due anni di esperienza pratica nello sviluppo web. Questa esperienza mi ha permesso di rafforzare le mie competenze tecniche, migliorare la mia creatività e sviluppare un approccio metodico per risolvere i problemi.",
+                    "A soli 18 anni, sono una persona motivata, veloce ed efficiente nel mio lavoro. Sono sempre pronto ad affrontare nuove sfide, imparare e crescere per dare il meglio di me in tutti i progetti a cui partecipo."
+                ],
+                "roblox": [
+                    "Mi chiamo Izaspanah Mohammad e la mia specialità è la creazione e lo sviluppo su Roblox Studio. Sono appassionato di progettare giochi interattivi e immersivi, dove la creatività e le competenze tecniche si uniscono per offrire esperienze uniche. Sebbene il mio ambito principale sia Roblox Studio, ho anche competenze nello sviluppo web, un campo in cui ho acquisito una solida base.",
+                    "Attualmente sono uno studente di informatica con specializzazione in programmazione e ho accumulato diversi anni di esperienza nella creazione di progetti su Roblox Studio e nello sviluppo web. Queste esperienze mi hanno permesso di padroneggiare strumenti essenziali, collaborare efficacemente con i team e trasformare le idee in progetti concreti.",
+                    "A soli 18 anni, sono una persona determinata, veloce ed efficiente. Il mio obiettivo è continuare a innovare nella creazione di contenuti digitali, in particolare su Roblox, espandendo al contempo le mie competenze verso tecnologie emergenti."
+                ]
+            },
+            "CV": "CV"
+        },
+        "Contact": {
+            "title": "Hai bisogno di aiuto?",
+            "Acroche": {
+                "mes1": "Contattami tramite i",
+                "mes12": "social network",
+                "mes2": "oppure inviami una",
+                "mes22": "e-mail."
+            },
+            "submit": "Contattaci"
+        }
+    },
     "Footer": {}
 }

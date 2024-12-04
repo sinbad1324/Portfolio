@@ -24,6 +24,11 @@
             },
             "CV": "CV"
         }
+        ,"Contact":{
+            "title":"Avez vous besoin d'aide?",
+            "Acroche":{"mes1": "Contactez-moi via les","mes12":"réseaux sociaux" ,"mes2": "ou envoyez-moi un","mes22":"e-mail."},
+            "submit":"Contactez nous"
+        }
     },
     "Footer": {}
 }

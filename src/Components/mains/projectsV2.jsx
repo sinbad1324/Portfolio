@@ -1,4 +1,7 @@
 import en from "../../data/lang/en/lang.json";
+import { getCurrentLang } from '../../data/getCurrentLang'
+import { useLangContext } from '../../hooks/useLangContext'
+
 // eslint-disable-next-line no-unused-vars
 import { useEffect, useState, useRef } from "react";
 // eslint-disable-next-line no-unused-vars
@@ -114,7 +117,9 @@ const BlockEle = () => {
 
 export const ProjectsWeb = () => {
   const FormsContainer = useRef()
-
+    const CurrentContextLang = useLangContext();
+    const currentLang = getCurrentLang(CurrentContextLang.Lang);
+    const NavList = currentLang.Header.nav;
   return (
     <div className=" relative group w-full h-full row-start-4 row-end-5 flex-col ">
       <div className=" absolute  group-hover:blur-sm blur-none top-0 left-0 w-full h-full  hidden md:block  overflow-hidden ">
@@ -130,7 +135,7 @@ export const ProjectsWeb = () => {
             id={navEN[3]}
             className=" ml-5 hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
           >
-            {navEN[3]}.
+            {NavList[3]}.
           </div>
         </div>
 

@@ -3,7 +3,8 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Line } from "../line";
 import { div } from "framer-motion/client";
-
+import { getCurrentLang } from '../../data/getCurrentLang'
+import { useLangContext } from '../../hooks/useLangContext'
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
 
@@ -11,7 +12,9 @@ const navEN = en.Header.nav;
 export const Project = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const skills = useRef();
-
+    const CurrentContextLang = useLangContext();
+    const currentLang = getCurrentLang(CurrentContextLang.Lang);
+    const NavList = currentLang.Header.nav;
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [showBtns, setShowBtns] = useState();
     const buttonVariants = {
@@ -69,7 +72,7 @@ export const Project = () => {
                             id={navEN[3]}
                             className=" hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
                         >
-                            {navEN[3]}.
+                            {NavList[3]}.
                         </div>
                     </div>
                     <div className="w-full h-fit">

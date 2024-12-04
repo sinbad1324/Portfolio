@@ -8,6 +8,33 @@
             "Contact"
         ]
     },
-    "Main": {},
+    "Main": {"About": {
+    "p": {
+        "web": [
+            "My name is Izaspanah Mohammad, and I am passionate about programming. Although my current expertise focuses on web development, I am very interested in machine learning, a field I aspire to work in the future.",
+            "Currently, I am a computer science student with a specialization in programming, and I have already gained two years of practical experience in web development. This experience has allowed me to strengthen my technical skills, enhance my creativity, and develop a methodical approach to problem-solving.",
+            "At only 18 years old, I am a motivated, fast, and efficient person in my work. I am always ready to take on new challenges, learn, and grow to give my best in every project I participate in."
+        ],
+        "roblox": [
+            "My name is Izaspanah Mohammad, and my specialty lies in creating and developing on Roblox Studio. I am passionate about designing interactive and immersive games, where creativity and technical skills meet to deliver unique experiences. While my main field is Roblox Studio, I also have skills in web development, a domain in which I have built a solid foundation.",
+            "Currently, I am a computer science student specializing in programming, and I have already accumulated several years of experience in creating projects on Roblox Studio and in web development. These experiences have allowed me to master essential tools, collaborate effectively with teams, and turn ideas into concrete projects.",
+            "At only 18 years old, I am a determined, fast, and efficient person. My goal is to continue innovating in digital content creation, particularly on Roblox, while expanding my skills toward emerging technologies."
+        ]
+    },
+    "CV": "CV"
+},
+"Contact": {
+    "title": "Do you need help?",
+    "Acroche": {
+        "mes1": "Contact me via the",
+        "mes12": "social networks",
+        "mes2": "or send me an",
+        "mes22": "email."
+    },
+    "submit": "Hit us up"
+}
+
+
+},
     "Footer": {}
 }

@@ -1,16 +1,23 @@
 import en from "../../data/lang/en/lang.json";
-import fr from "../../data/lang/fr/lang.json";
+import { getCurrentLang } from '../../data/getCurrentLang'
+import { useLangContext } from '../../hooks/useLangContext'
 
 import { useEffect, useState, useRef } from "react";
 import { Line } from "../line";
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
-const AboutLang = fr.Main.About;
 let paragraph = "web"
 // eslint-disable-next-line react/prop-types
 export const About = () => {
     const params = new URLSearchParams(window.location.search).get("settings")
     if (params && params.toLowerCase() == "roblox") paragraph = "roblox"
+    
+    const CurrentContextLang = useLangContext();
+    const currentLang = getCurrentLang(CurrentContextLang.Lang);
+    const AboutLang = currentLang.Main.About;
+    const NavList = currentLang.Header.nav;
+
+
     const [show, setShow] = useState(false);
     const About = useRef();
     const AboutDiv = useRef();
@@ -64,7 +71,8 @@ export const About = () => {
                             id={navEN[1]}
                             className=" hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
                         >
-                            {navEN[1]}.
+                            {NavList[1]}.
+
                         </div>
                     </div>
                     <div className="w-full lg:text-xl text-lg font-light text-l-blue-12 dark:text-d-blue-12 h-fit flex flex-col  items-start justify-center lg:gap-5 gap-3 ">

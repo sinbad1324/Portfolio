@@ -8,6 +8,32 @@
             "Kontakt"
         ]
     },
-    "Main": {},
+    "Main": {
+        "About": {
+            "p": {
+                "web": [
+                    "Mein Name ist Izaspanah Mohammad, und ich bin leidenschaftlich an Programmierung interessiert. Obwohl mein aktueller Schwerpunkt auf der Webentwicklung liegt, interessiere ich mich sehr für maschinelles Lernen, ein Bereich, in dem ich in der Zukunft arbeiten möchte.",
+                    "Derzeit bin ich Informatikstudent mit einer Spezialisierung auf Programmierung und habe bereits zwei Jahre praktische Erfahrung in der Webentwicklung gesammelt. Diese Erfahrung hat es mir ermöglicht, meine technischen Fähigkeiten zu stärken, meine Kreativität zu fördern und einen methodischen Ansatz zur Problemlösung zu entwickeln.",
+                    "Mit nur 18 Jahren bin ich eine motivierte, schnelle und effiziente Person in meiner Arbeit. Ich bin immer bereit, neue Herausforderungen anzunehmen, zu lernen und mich weiterzuentwickeln, um in allen Projekten, an denen ich teilnehme, mein Bestes zu geben."
+                ],
+                "roblox": [
+                    "Mein Name ist Izaspanah Mohammad, und meine Spezialität liegt in der Erstellung und Entwicklung auf Roblox Studio. Ich bin leidenschaftlich daran interessiert, interaktive und immersive Spiele zu gestalten, bei denen Kreativität und technische Fähigkeiten zusammenkommen, um einzigartige Erlebnisse zu bieten. Obwohl mein Hauptbereich Roblox Studio ist, habe ich auch Kenntnisse in der Webentwicklung, einem Bereich, in dem ich eine solide Basis erworben habe.",
+                    "Derzeit bin ich Informatikstudent mit einer Spezialisierung auf Programmierung und habe bereits mehrere Jahre Erfahrung in der Erstellung von Projekten auf Roblox Studio und in der Webentwicklung gesammelt. Diese Erfahrungen haben es mir ermöglicht, wichtige Werkzeuge zu beherrschen, effektiv mit Teams zusammenzuarbeiten und Ideen in konkrete Projekte umzusetzen.",
+                    "Mit nur 18 Jahren bin ich eine entschlossene, schnelle und effiziente Person. Mein Ziel ist es, weiterhin Innovationen in der Erstellung digitaler Inhalte, insbesondere auf Roblox, zu fördern und gleichzeitig meine Fähigkeiten auf aufstrebende Technologien auszudehnen."
+                ]
+            },
+            "CV": "Lebenslauf"
+        },
+        "Contact": {
+            "title": "Brauchen Sie Hilfe?",
+            "Acroche": {
+                "mes1": "Kontaktieren Sie mich über die",
+                "mes12": "sozialen Netzwerke",
+                "mes2": "oder senden Sie mir eine",
+                "mes22": "E-Mail."
+            },
+            "submit": "Kontaktieren Sie uns"
+        }
+    },
     "Footer": {}
 }

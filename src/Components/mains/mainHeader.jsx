@@ -11,6 +11,9 @@ export const MainHeader = () => {
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
+
+
+
     useEffect(() => {
         if (IsRenderRef.current) return;
         IsRenderRef.current = true;
