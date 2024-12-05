@@ -9,7 +9,6 @@ import { Line } from "../line";
 
 const navEN = en.Header.nav;
 const url = "http://localhost:3000/mail"
-
 function AnimatedCheckIcon({className}) {
     return (
         <svg
@@ -39,10 +38,18 @@ export const Contact = () => {
 
     const [loadingmail , setloadingmail] = useState(false);
     const [Loaded , setLoaded] = useState(false);
+    const [ ErorrMessage, setErorrMessage] = useState("");
 
     const form = useRef()
     const onSubmit = (event) => {
         event.preventDefault()
+        if (formData.get("name").length <= 0 ||formData.get("email").length <= 0 || formData.get("message").length <= 0){
+            setErorrMessage(contactLang.error1);
+            setTimeout(()=>{
+                setErorrMessage("");
+            } , 2000)
+            return;
+        }
         setloadingmail(true);
         // eslint-disable-next-line no-unused-vars
         const formData = new FormData(form.current);
@@ -54,24 +61,27 @@ export const Contact = () => {
             },
             body: JSON.stringify({ name: formData.get("name"), mail: formData.get("email"), message: formData.get("message") })
         }).then(response => response.json()).then(response => {
-            console.log(response)
             if (response && response.message && response.message.Message == "OK") {
                 setloadingmail(false);
                 setLoaded(true)
                 setTimeout(()=>{
                     setLoaded(false)
-                } , 1000)
+                } , 2000)
             }
         })
     }
-
+    console.log(Loaded  );
+    
     return (
         <>
-            <div className={" fixed top-24 z-[500] left-[45%]"}>
-                    <img src="./spin.svg" alt="loading spin" className={"bg-transparent size-24"+loadingmail == true ? "block" : "hidden"}/>
-                    <div className={"w-40 h-14 rounded-md border  p-3 border-d-vert-8 bg-d-blue-3 flex flex-row items-center justify-between"+ Loaded==true?"block":"hidden"}>
+            <div className={" fixed top-24 z-[500] w-full left-0 flex flex-row justify-center items-center "}>
+                    <img src="./spin.svg" alt="loading spin" className={`bg-transparent size-24 ${loadingmail == true ? "block" : "hidden"}`}/>
+                    <div className={`w-40 h-14 rounded-md border  p-3 border-d-vert-8 bg-d-blue-3 flex flex-row items-center justify-between ${Loaded==true?" block":"hidden"}`}>
                             <AnimatedCheckIcon className="text-d-vert-10 size-11"/>
                             <p className="text-d-vert-11">Accepted</p>
+                    </div>
+                    <div className={`w-[40%] h-14 rounded-md border  p-3 border-d-blue-8 bg-d-vert-4 flex flex-row items-center justify-between ${ErorrMessage.length > 0 ?" block":"hidden"}`}>
+                            <p className="text-red-700 w-full h-full font-bold flex justify-center items-center">{ErorrMessage}</p>
                     </div>
             </div>
             <div
@@ -95,15 +105,15 @@ export const Contact = () => {
                     <form ref={form} className="md:w-1/2  w-full  h-full flex flex-col justify-center items-center gap-3">
                         <div className="flex flex-col md:w-1/2  w-3/4  gap-1">
                             <label htmlFor="name">Name:</label>
-                            <input id="name" name="name" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="text" required placeholder="Name..." />
+                            <input id="name" name="name" required className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="text" required placeholder="Name..." />
                         </div>
                         <div className="flex flex-col md:w-1/2  w-3/4 gap-1">
                             <label htmlFor="mail">E-Mail:</label>
-                            <input id="mail" name="email" className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="email" required placeholder="Mail..." />
+                            <input id="mail" name="email"  className="w-full h-12 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 pl-5" type="email" required placeholder="Mail..." />
                         </div>
                         <div className="flex flex-col md:w-1/2  w-3/4 gap-1">
                             <label htmlFor="Message">Message:</label>
-                            <textarea id="Message" name="message" className="w-full min-h-20 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 p-3" required placeholder="Message..." ></textarea>
+                            <textarea id="Message" name="message"  className="w-full min-h-20 border-2  border-l-blue-6 dark:border-d-blue-5 bg-l-blue-5 rounded-sm outline-none dark:bg-d-blue-2 p-3" required placeholder="Message..." ></textarea>
                         </div>
                         <div className="flex md:flex-row justify-between md:w-1/2 md:gap-0 gap-5  w-3/4 flex-col ">
                             <div className="flex flex-row gap-2 justify-center items-center">

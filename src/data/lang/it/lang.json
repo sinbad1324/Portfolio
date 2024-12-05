@@ -32,8 +32,19 @@
                 "mes2": "oppure inviami una",
                 "mes22": "e-mail."
             },
-            "submit": "Contattaci"
-        }
+            "submit": "Contattaci",
+            "error1":"È necessario compilare tutti i campi!"
+        },
+        
+            "Projectv1": {
+              "texts": [
+                "Questo progetto Roblox è una base per un gioco che integra diverse funzionalità avanzate. Include un sistema di combattimento dinamico, un menu interattivo con un negozio che si ricarica ogni 2 ore, un sistema di alleanze per incoraggiare la collaborazione tra i giocatori, oltre a un inventario e un monitoraggio delle statistiche personalizzate. Ho anche sviluppato una meccanica di ricompense che consente ai giocatori di fare regali, come tempo di gioco o oggetti. Questo progetto mette in risalto le mie competenze nella programmazione, nella progettazione di sistemi interattivi e nella creazione di esperienze immersive in Roblox Studio.",
+                "Questo plugin di produttività migliora la tua velocità e le tue prestazioni del 90% grazie alle sue numerose funzionalità. Organizza i tuoi file con un'IA integrata, categorizzandoli, misurandone le dimensioni e identificando i flipbook. Trasforma anche i tuoi disegni in parti su Roblox, semplificando la creazione di forme complesse. Inoltre, simula le funzionalità del ParticalEmitter di Roblox Studio e offre un sistema avanzato di emitter con funzioni come ritardo, scalatura, copia e incolla di valori, curve di Bézier e controllo dei raggi.",
+                "Ecco una panoramica degli allenamenti che ho realizzato, con attacchi diversi che ho immaginato personalmente. Ogni dettaglio, dalle animazioni agli effetti visivi, è stato interamente creato da me. Questi allenamenti mostrano non solo la mia creatività, ma anche la mia dedizione nel perfezionare ogni aspetto delle animazioni. Gli attacchi sono stati progettati per essere sia visivamente impressionanti che tecnicamente sofisticati, dimostrando una profonda padronanza delle tecniche di VFX. Ogni sequenza è il risultato di un processo accurato di progettazione e realizzazione, mirato a offrire un'esperienza coinvolgente e immersiva."
+              ]
+            }
+          
+          
     },
     "Footer": {}
 }

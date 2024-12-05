@@ -8,13 +8,20 @@ import { useLangContext } from '../../hooks/useLangContext'
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
 
-
+const videos = [
+    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
+    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
+    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4"
+]
 export const Project = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const skills = useRef();
     const CurrentContextLang = useLangContext();
     const currentLang = getCurrentLang(CurrentContextLang.Lang);
     const NavList = currentLang.Header.nav;
+    const projectLang = currentLang.Main.Projectv1;
+
+    const [currenVideo , setCurrentVideo] = useState(1)
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [showBtns, setShowBtns] = useState();
     const buttonVariants = {
@@ -57,9 +64,9 @@ export const Project = () => {
             <div className="  flex md:flex-row-reverse  md:justify-between justify-center h-full items-center  md:items-start flex-col-reverse ">
                 <div className="md:w-[50vw] w-full flex  justify-center  items-center ">
                     <div className="ml-5 h-auto md:rounded-xl rounded-md max-h-[700px]  w-full   md:mt-0  mr-10 mt-10 bg-transparent  shadow-md ">
-                        <video className="rounded-lg w-full h-full" autoPlay muted controls>
+                        <video className="rounded-lg w-full h-full" autoPlay muted controls >
                             <source
-                                src="https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4"
+                                src={videos[currenVideo-1]}
                                 type="video/mp4"
                             />
                         </video>
@@ -92,6 +99,7 @@ export const Project = () => {
                                             }}
                                             whileHover={{ scale: 1.1, transition: { duration: .05 } }}
                                             whileTap={{ scale: 0.8, transition: { duration: .1 } }}
+                                            onClick={()=>{setCurrentVideo(number)}}
                                         >
                                             P.{number}
                                         </motion.button>
@@ -102,11 +110,8 @@ export const Project = () => {
                     </div>
                     <div className="w-full lg:text-xl text-lg font-light text-l-blue-12 dark:text-d-blue-12 h-fit flex flex-col  items-start justify-center lg:gap-5 gap-3 ">
                         <div className="w-full h-fit overflow-hidden max-h-[200px] ">
-                            <p className="  relative active:animate-YApear ">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Eligendi perspiciatis, expedita doloremque eos ab sequi labore
-                                voluptatibus dolore voluptatem. Dolores cum cupiditate optio ea
-                                reiciendis veniam officia maxime sunt consequatur?
+                            <p className="  relative  ">
+                                {projectLang.texts[currenVideo-1]}
                             </p>
                         </div>
                     </div>

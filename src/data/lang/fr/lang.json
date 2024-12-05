@@ -27,7 +27,15 @@
         ,"Contact":{
             "title":"Avez vous besoin d'aide?",
             "Acroche":{"mes1": "Contactez-moi via les","mes12":"réseaux sociaux" ,"mes2": "ou envoyez-moi un","mes22":"e-mail."},
-            "submit":"Contactez nous"
+            "submit":"Contactez nous",
+            "error1":"Vous devez remplir tous les champs !"
+        },
+        "Projectv1":{
+            "texts":[
+                "Ce projet Roblox est une base pour un jeu intégrant plusieurs fonctionnalités avancées. Il comprend un système de combat dynamique, un menu interactif avec une boutique qui se recharge toutes les 2 heures, un système d'alliances pour encourager la collaboration entre joueurs, ainsi qu'un inventaire et un suivi des statistiques personnalisées. J'ai également développé une mécanique de récompenses permettant aux joueurs de s'offrir des cadeaux, comme du temps de jeu ou des objets. Ce projet met en avant mes compétences en programmation, en conception de systèmes interactifs et en création d'expériences immersives dans Roblox Studio.",
+                "Ce plugin de productivité améliore votre rapidité et vos performances de 90% grâce à ses nombreuses fonctionnalités. Il organise vos fichiers avec une IA intégrée, catégorisant et mesurant leur taille, tout en identifiant les flipbooks. Il transforme également vos dessins en parties dans Roblox, simplifiant la création de formes complexes. De plus, il simule les fonctionnalités du ParticalEmitter de Roblox Studio et propose un système d'émetteurs avancé avec des fonctionnalités telles que le délai, la mise à l'échelle, le copier-coller des valeurs, les courbes de Bézier et le contrôleur de faisceaux.",
+                "Voici un aperçu des entraînements que j'ai réalisés, mettant en scène diverses attaques que j'ai imaginées moi-même. Chaque détail, des animations aux effets visuels, a été entièrement créé par mes soins. Ces sessions d'entraînement illustrent non seulement ma créativité, mais aussi mon dévouement à perfectionner chaque aspect des animations. Les attaques sont conçues pour être à la fois visuellement impressionnantes et techniquement sophistiquées, démontrant une maîtrise approfondie des techniques de VFX. Chaque séquence est le fruit d'un processus minutieux de conception et de réalisation, visant à offrir une expérience immersive et captivante."
+            ]
         }
     },
     "Footer": {}

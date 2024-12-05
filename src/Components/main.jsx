@@ -11,7 +11,9 @@ export default function Main() {
 
     //Observe
     // eslint-disable-next-line no-unused-vars
-
+    if (!params ||params.toLocaleLowerCase() != "roblox"){
+        document.location.href = "http://localhost:5173/?settings=roblox"
+    }
     return (
         <main className=" z-0 rootMain row-start-2 row-end-3 ">
 

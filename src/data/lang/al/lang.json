@@ -32,8 +32,19 @@
                 "mes2": "oder senden Sie mir eine",
                 "mes22": "E-Mail."
             },
-            "submit": "Kontaktieren Sie uns"
-        }
+            "submit": "Kontaktieren Sie uns",
+            "error1":"Je moet alle velden invullen!"
+        },
+        
+            "Projectv1": {
+              "texts": [
+                "Dieses Roblox-Projekt ist die Grundlage für ein Spiel mit mehreren fortgeschrittenen Funktionen. Es umfasst ein dynamisches Kampfsystem, ein interaktives Menü mit einem Shop, der sich alle 2 Stunden aktualisiert, ein Allianzsystem zur Förderung der Zusammenarbeit zwischen Spielern sowie ein Inventar und eine personalisierte Statistikverfolgung. Ich habe auch einen Belohnungsmechanismus entwickelt, der es den Spielern ermöglicht, Geschenke wie Spielzeit oder Gegenstände zu machen. Dieses Projekt zeigt meine Fähigkeiten in der Programmierung, im Design interaktiver Systeme und in der Erstellung immersiver Erlebnisse in Roblox Studio.",
+                "Dieses Produktivitäts-Plugin verbessert Ihre Geschwindigkeit und Leistung um 90 % durch zahlreiche Funktionen. Es organisiert Ihre Dateien mit einer integrierten KI, kategorisiert sie, misst ihre Größe und erkennt Flipbooks. Es wandelt auch Ihre Zeichnungen in Teile in Roblox um und vereinfacht so die Erstellung komplexer Formen. Darüber hinaus simuliert es die Funktionen des ParticalEmitter von Roblox Studio und bietet ein fortschrittliches Emittersystem mit Funktionen wie Verzögerung, Skalierung, Kopieren und Einfügen von Werten, Bézier-Kurven und Strahlsteuerung.",
+                "Hier ist eine Vorschau auf die Trainings, die ich durchgeführt habe, mit verschiedenen Angriffen, die ich selbst entworfen habe. Jedes Detail, von den Animationen bis zu den visuellen Effekten, wurde vollständig von mir erstellt. Diese Trainings zeigen nicht nur meine Kreativität, sondern auch mein Engagement, jeden Aspekt der Animationen zu perfektionieren. Die Angriffe sind so konzipiert, dass sie sowohl visuell beeindruckend als auch technisch ausgefeilt sind, was eine tiefgehende Beherrschung der VFX-Techniken demonstriert. Jede Sequenz ist das Ergebnis eines sorgfältigen Design- und Entwicklungsprozesses, der darauf abzielt, ein fesselndes und immersives Erlebnis zu bieten."
+              ]
+            }
+          
+          
     },
     "Footer": {}
 }

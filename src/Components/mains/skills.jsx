@@ -43,7 +43,7 @@ export const Skills = () => {
         <div className=" relative bg-transparent w-full h-auto   row-start-3 row-end-4 flex  justify-between  items-center flex-col ">
             <div className="mb-11 "></div>
             <div className="w-full pl-5 h-fit flex flex-row justify-center items-center md:justify-start">
-                <div
+                <div id={navEN[2]}
                     className=" hover:scale-110 transition-all ease-in duration-75  cursor-pointer w-24 h-12 flex justify-center items-center rounded-full  bg-l-vert-7 dark:bg-d-vert-7 text-xl text-l-vert-12 dark:text-d-vert-12 border  border-d-vert-3 dark:border-d-vert-10 "
                 >
                     {NavList[2]}.
