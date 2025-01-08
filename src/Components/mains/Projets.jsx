@@ -2,12 +2,17 @@ import en from "../../data/lang/en/lang.json";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Line } from "../line";
-import { div } from "framer-motion/client";
+import { div, select } from "framer-motion/client";
 import { getCurrentLang } from '../../data/getCurrentLang'
 import { useLangContext } from '../../hooks/useLangContext'
 //import pentagon from "../assets/pentagon"
 const navEN = en.Header.nav;
-
+const allProjects = [
+    "VFX",
+    "LUA",
+    "Blender",
+    "UI/UX"
+];
 const videos = [
     "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
     "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
@@ -20,13 +25,15 @@ export const Project = () => {
     const currentLang = getCurrentLang(CurrentContextLang.Lang);
     const NavList = currentLang.Header.nav;
     const projectLang = currentLang.Main.Projectv1;
-
+    const [currentProjects , setCurrentProjects] = useState("Lua");
     const [currenVideo , setCurrentVideo] = useState(1)
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [showBtns, setShowBtns] = useState();
     const buttonVariants = {
         hidden: { scale: 0, rotate: 300 },
         visible: { scale: 1, rotate: 0 },
+        selected: { scale: 1.2, rotate: 0 ,transition: { duration: .1 }},
+
     };
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -81,6 +88,32 @@ export const Project = () => {
                         >
                             {NavList[3]}.
                         </div>
+                    </div>
+                    <div className="w-full h-fit">
+                        <ul className="w-full flex flex-row md:justify-start justify-start items-center gap-6">
+                            {allProjects.map((item , index) => {
+                                return (
+                                    <li key={index}>
+                                        <motion.button
+                                            className="hover:rounded-full   cursor-pointer w-10 h-10 flex justify-center items-center rounded-md bg-l-vert-5 hover:bg-l-vert-7 dark:bg-d-vert-3 dark:hover:bg-d-vert-4 text-[.5rem] font-bold uppercase text-l-vert-12 dark:text-d-vert-12 border border-d-vert-3 dark:border-d-vert-10"
+                                            initial="hidden"
+                                            animate={showBtns ? currentProjects == item ? "selected" :"visible" : "hidden" }
+                                            variants={buttonVariants}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 50,
+                                                damping: 5,
+                                            }}
+                                            whileHover={{ scale: 1.1, transition: { duration: .05 } }}
+                                            whileTap={{ scale: 0.8, transition: { duration: .1 } }}
+                                            onClick={()=>{setCurrentProjects(item)}}
+                                        >
+                                            {item}
+                                        </motion.button>
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </div>
                     <div className="w-full h-fit">
                         <ul className="w-full flex flex-row md:justify-end justify-center items-center gap-6">

@@ -20,8 +20,6 @@ export default function Nav() {
 
     const onHandle = (e) => {
         setSelect(e.target.textContent)
-        console.log(document.location.href);
-        
         setMobileNav(false)
     }
     const onClose = () => {
