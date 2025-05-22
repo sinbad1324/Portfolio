@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { Line } from "../line";
 
 const navEN = en.Header.nav;
-const url = "http://localhost:3000/mail"
+const url = "http://localhost:8080/api/gmail/sendMail"
 function AnimatedCheckIcon({className}) {
     return (
         <svg
@@ -61,7 +61,7 @@ export const Contact = () => {
             },
             body: JSON.stringify({ name: formData.get("name"), mail: formData.get("email"), message: formData.get("message") })
         }).then(response => response.json()).then(response => {
-            if (response && response.message && response.message.Message == "OK") {
+            if (response && response.message && response.message.message == "OK") {
                 setloadingmail(false);
                 setLoaded(true)
                 setTimeout(()=>{
@@ -70,7 +70,6 @@ export const Contact = () => {
             }
         })
     }
-    console.log(Loaded  );
     
     return (
         <>
