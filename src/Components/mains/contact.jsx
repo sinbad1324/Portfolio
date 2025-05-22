@@ -43,30 +43,38 @@ export const Contact = () => {
     const form = useRef()
     const onSubmit = (event) => {
         event.preventDefault()
+        const formData = new FormData(form.current);
         if (formData.get("name").length <= 0 ||formData.get("email").length <= 0 || formData.get("message").length <= 0){
             setErorrMessage(contactLang.error1);
             setTimeout(()=>{
                 setErorrMessage("");
             } , 2000)
             return;
-        }
+        }        
         setloadingmail(true);
         // eslint-disable-next-line no-unused-vars
-        const formData = new FormData(form.current);
         fetch(url, {
             method: "post",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ name: formData.get("name"), mail: formData.get("email"), message: formData.get("message") })
-        }).then(response => response.json()).then(response => {
-            if (response && response.message && response.message.message == "OK") {
+            body: JSON.stringify({ name: formData.get("name"), email: formData.get("email"), message: formData.get("message") })
+        }).then(response => response.json()).then(response => {           
+            if (response && response.status == true) {
                 setloadingmail(false);
                 setLoaded(true)
                 setTimeout(()=>{
                     setLoaded(false)
                 } , 2000)
+            }else{
+                setErorrMessage(response.message);
+                setloadingmail(false);
+                    setLoaded(false)
+                setTimeout(()=>{
+                    setErorrMessage("");
+                } , 2000)
+
             }
         })
     }
