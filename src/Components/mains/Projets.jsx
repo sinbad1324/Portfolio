@@ -14,9 +14,9 @@ const allProjects = [
     "UI/UX"
 ];
 const videos = [
-    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
-    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4",
-    "https://i.gyazo.com/a67b13209d916717cd1fe5fed607e937.mp4"
+    "AnatomicExplosionFunk.mp4",
+    "Attack2.mp4",
+    "Attacke3.mp4"
 ]
 export const Project = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -71,12 +71,16 @@ export const Project = () => {
             <div className="  flex md:flex-row-reverse  md:justify-between justify-center h-full items-center  md:items-start flex-col-reverse ">
                 <div className="md:w-[50vw] w-full flex  justify-center  items-center ">
                     <div className="ml-5 h-auto md:rounded-xl rounded-md max-h-[700px]  w-full   md:mt-0  mr-10 mt-10 bg-transparent  shadow-md ">
-                        <video className="rounded-lg w-full h-full" autoPlay muted controls >
+                       {
+                        videos.map((src , index)=>{
+                            return  <video style={{display:videos[currenVideo-1] == src ? "block":"none"}} key={"VideoVFX"+index} className="rounded-lg w-full h-full"  autoPlay muted controls >
                             <source
-                                src={videos[currenVideo-1]}
+                                src={src}
                                 type="video/mp4"
                             />
                         </video>
+                        })
+                       }
                     </div>
                 </div>
                 <div className="md:h-auto  md:max-h-[500px] md:w-[50vw]  w-full max-h-[1000px]    bg-transparent pr-6 p-4 overflow-hidden   rounded-lg  flex flex-col justify-start items-start lg:gap-6  gap-2   ">
